@@ -1,0 +1,132 @@
+:root {
+    /* primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* natural */
+    -Very-Dark-Blue: hsl(234, 12%, 34%);
+    -Grayish-Blue: hsl(229, 6%, 66%);
+    -Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: var(-Very-Light-Gray);
+    color: var(-Grayish-Blue);
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    color: var(-Very-Dark-Blue);
+}
+
+p {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+header {
+    max-width: 500px;
+    margin: 3.5rem auto;
+    text-align: center;
+    letter-spacing: .09rem;
+}
+
+article {
+    display: grid;
+    align-items: center;
+    grid-gap: 2.3rem;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 12px 20px -2px rgba(00, 0, 0, .2);
+    -moz-box-shadow: 0px 12px 20px -2px rgba(00, 0, 0, .2);
+    box-shadow: 0px 12px 20px -2px rgba(00, 0, 0, .2);
+}
+
+article h3 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+article p {
+    font-size: .7rem;
+    margin: 0 0 100px 0;
+}
+
+section {
+    position: relative;
+    min-height: 180px;
+    max-width: 270px;
+    border-radius: .4rem;
+    background: white;
+    padding: 1.8rem;
+    -webkit-box-shadow: 0px 12px 20px -2px rgba(00, 0, 0, .2);
+    -moz-box-shadow: 0px 12px 20px -2px rgba(00, 0, 0, .2);
+    box-shadow: 0px 12px 20px -2px rgba(00, 0, 0, .2);
+}
+
+section img {
+    position: absolute;
+    right: 1.8rem;
+    bottom: 1.8rem;
+    max-width: 55px;
+}
+
+.cyan {
+    border-top: 2px solid var(--Cyan);
+    grid-row: 1/5;
+    cursor: pointer;
+}
+
+.red {
+    border-top: 2px solid var(--Red);
+    grid-row: 1/3;
+    cursor: pointer;
+}
+
+.orange {
+    border-top: 2px solid var(--Orange);
+    grid-row: 3/5;
+    grid-column: 2/3;
+    cursor: pointer;
+}
+
+.blue {
+    border-top: 2px solid var(--Blue);
+    grid-row: 1/5;
+    cursor: pointer;
+}
+
+@media screen and (max-width:760px) {
+    article {
+        display: block;
+    }
+    section {
+        margin: 2rem 0;
+    }
+    h2,
+    h3 {
+        font-size: medium;
+    }
+    p {
+        font-size: small;
+    }
+}
